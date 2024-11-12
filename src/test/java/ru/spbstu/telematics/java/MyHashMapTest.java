@@ -72,6 +72,13 @@ public class MyHashMapTest
         assertFalse(myExample.containsKey(2));
     }
 
+    public void testContainsValue() {
+        MyHashMap<Integer, String> myExample = new MyHashMap<Integer, String>();
+        myExample.put(1, "A");
+        assertTrue(myExample.containsValue("A"));
+        assertFalse(myExample.containsValue("B"));
+    }
+
     public void testClear() {
         MyHashMap<Integer, String> myExample = new MyHashMap<Integer, String>();
         myExample.put(1, "A");
